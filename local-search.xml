@@ -11,6 +11,18 @@
     <content type="html"><![CDATA[<h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><h3 id="1、在需要上传的项目的文件下进入git，输入git-init，文件夹下生成-git文件夹。"><a href="#1、在需要上传的项目的文件下进入git，输入git-init，文件夹下生成-git文件夹。" class="headerlink" title="1、在需要上传的项目的文件下进入git，输入git init，文件夹下生成.git文件夹。"></a>1、在需要上传的项目的文件下进入git，输入git init，文件夹下生成.git文件夹。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git init<br></code></pre></td></tr></table></figure><h3 id="2、输入git-add-注意：add空格后面有一个点"><a href="#2、输入git-add-注意：add空格后面有一个点" class="headerlink" title="2、输入git add . (注意：add空格后面有一个点)"></a>2、输入git add . (注意：add空格后面有一个点)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git add .<br></code></pre></td></tr></table></figure><p>之后可以输入git status，查看当前状态</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git status<br></code></pre></td></tr></table></figure><h3 id="3、开始提交，git-commit-m-“提交时的注释”"><a href="#3、开始提交，git-commit-m-“提交时的注释”" class="headerlink" title="3、开始提交，git commit -m “提交时的注释”"></a>3、开始提交，git commit -m “提交时的注释”</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git commit -m <span class="hljs-string">&quot;first commit&quot;</span><br></code></pre></td></tr></table></figure><h3 id="4、配置SSH密钥"><a href="#4、配置SSH密钥" class="headerlink" title="4、配置SSH密钥"></a>4、配置SSH密钥</h3><p>输入代码 ssh-keygen -t rsa -C “你的注册邮箱”，一直回车，在用户下找到.ssh文件夹。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ssh-keygen -t rsa -C <span class="hljs-string">&quot;你的注册邮箱&quot;</span><br></code></pre></td></tr></table></figure><p>复制id_rsa.pub文件的全部内容，在GitHub上配置SSH</p><h3 id="5、GitHub仓库和本地库进行链接"><a href="#5、GitHub仓库和本地库进行链接" class="headerlink" title="5、GitHub仓库和本地库进行链接"></a>5、GitHub仓库和本地库进行链接</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git remote add origin 指定的GitHub库<br></code></pre></td></tr></table></figure><p>注意：第一次进行上传会让弹框，让输入用户名，密码，根据提示进行操作即可。</p><p>6、上传项目</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git pull --rebase origin master<br></code></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git push origin master<br></code></pre></td></tr></table></figure><p>这样就将项目上传到GitHub库了！</p>]]></content>
     
     
+    <categories>
+      
+      <category>杂记</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>GitHub</tag>
+      
+    </tags>
     
   </entry>
   
