@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>配置分类和标签</title>
+    <link href="/2024/08/17/%E9%85%8D%E7%BD%AE%E5%88%86%E7%B1%BB%E5%92%8C%E6%A0%87%E7%AD%BE/"/>
+    <url>/2024/08/17/%E9%85%8D%E7%BD%AE%E5%88%86%E7%B1%BB%E5%92%8C%E6%A0%87%E7%AD%BE/</url>
+    
+    <content type="html"><![CDATA[<h1 id="一、创建“分类”选项"><a href="#一、创建“分类”选项" class="headerlink" title="一、创建“分类”选项"></a>一、创建“分类”选项</h1><h2 id="1、生成“分类”页并添加type属性"><a href="#1、生成“分类”页并添加type属性" class="headerlink" title="1、生成“分类”页并添加type属性"></a>1、生成“分类”页并添加type属性</h2><p>在博客所在文件打开git命令窗口，执行命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npx hexo new page categories<br></code></pre></td></tr></table></figure><p>成功后会提示</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">INFO  Created: ~/Documents/blog/source/categories/index.md<br></code></pre></td></tr></table></figure><p>根据上面的路径，找到index.md这个文件，打开后默认内容是这样的</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">---<br>title: 文章分类<br><span class="hljs-built_in">date</span>: 2017-05-27 13:47:40<br>---<br></code></pre></td></tr></table></figure><p>添加type: “categories”到内容中，添加后是这样的：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">---<br>title: 文章分类<br><span class="hljs-built_in">date</span>: 2017-05-27 13:47:40<br><span class="hljs-built_in">type</span>: <span class="hljs-string">&quot;categories&quot;</span><br>---<br></code></pre></td></tr></table></figure><p>保存并关闭文件。</p><h2 id="2、给文章添加“categories”属性"><a href="#2、给文章添加“categories”属性" class="headerlink" title="2、给文章添加“categories”属性"></a>2、给文章添加“categories”属性</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash">---<br>title: jQuery对表单的操作及更多应用<br><span class="hljs-built_in">date</span>: 2017-05-26 12:12:57<br>categories: <br>- web前端<br>---<br></code></pre></td></tr></table></figure><p>这样就成功给文章添加了分类</p><h1 id="二、创建“标签”选项"><a href="#二、创建“标签”选项" class="headerlink" title="二、创建“标签”选项"></a>二、创建“标签”选项</h1><h2 id="1、生成“标签”页并添加tpye属性"><a href="#1、生成“标签”页并添加tpye属性" class="headerlink" title="1、生成“标签”页并添加tpye属性"></a>1、生成“标签”页并添加tpye属性</h2><p>打开git命令窗口，执行</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new page tags<br></code></pre></td></tr></table></figure><p>成功后提示</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">INFO  Created: ~/Documents/blog/source/tags/index.md<br></code></pre></td></tr></table></figure><p>根据上面的路径，找到index.md这个文件，打开后默认内容是这样的：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">---<br>title: 标签<br><span class="hljs-built_in">date</span>: 2017-05-27 14:22:08<br>---<br></code></pre></td></tr></table></figure><p>添加type: “tags”到内容中，添加后是这样的：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">---<br>title: 文章分类<br><span class="hljs-built_in">date</span>: 2017-05-27 13:47:40<br><span class="hljs-built_in">type</span>: <span class="hljs-string">&quot;tags&quot;</span><br>---<br></code></pre></td></tr></table></figure><p>保存并关闭文件。</p><h2 id="2、给文章添加“tags”属性"><a href="#2、给文章添加“tags”属性" class="headerlink" title="2、给文章添加“tags”属性"></a>2、给文章添加“tags”属性</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs bash">---<br>title: jQuery对表单的操作及更多应用<br><span class="hljs-built_in">date</span>: 2017-05-26 12:12:57<br>categories: <br>- web前端<br>tags:<br>- jQuery<br>- 表格<br>- 表单验证<br>---<br></code></pre></td></tr></table></figure><p>这样就成功给文章添加标签了<br>！！！！！！！！！！！！！！！！！！！！！！！！！</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>个人博客创建</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>GitHub</tag>
+      
+      <tag>Hexo</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Hexo博客部署至GitHub后图片无法显示</title>
     <link href="/2024/08/16/Hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E8%87%B3GitHub%E5%90%8E%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA/"/>
     <url>/2024/08/16/Hexo%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E8%87%B3GitHub%E5%90%8E%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA/</url>
