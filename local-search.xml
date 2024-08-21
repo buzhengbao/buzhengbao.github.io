@@ -5,8 +5,8 @@
   
   <entry>
     <title>学生选课管理系统</title>
-    <link href="/2024/08/21/%E5%AD%A6%E7%94%9F%E9%80%89%E8%AF%BE%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
-    <url>/2024/08/21/%E5%AD%A6%E7%94%9F%E9%80%89%E8%AF%BE%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/</url>
+    <link href="/2024/08/21/%E5%AD%A6%E7%94%9F%E9%80%89%E8%AF%BE%E7%B3%BB%E7%BB%9F/%E5%AD%A6%E7%94%9F%E9%80%89%E8%AF%BE%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
+    <url>/2024/08/21/%E5%AD%A6%E7%94%9F%E9%80%89%E8%AF%BE%E7%B3%BB%E7%BB%9F/%E5%AD%A6%E7%94%9F%E9%80%89%E8%AF%BE%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/</url>
     
     <content type="html"><![CDATA[<h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>学习前后端分离的项目搭建方法</p><h1 id="系统技术栈"><a href="#系统技术栈" class="headerlink" title="系统技术栈"></a>系统技术栈</h1><blockquote><p>后端：Springboot3、MyBatis、SpringMVC<br>前端：Vue3、Element-Plus<br>数据库：MySQL 5.7 或者 MySQL 8<br>前后端：分离<br>编辑器：IDEA2024  </p></blockquote><h1 id="系统功能描述"><a href="#系统功能描述" class="headerlink" title="系统功能描述"></a>系统功能描述</h1><h2 id="1、功能模块"><a href="#1、功能模块" class="headerlink" title="1、功能模块"></a>1、功能模块</h2><blockquote><p>管理员信息：用户名、密码、姓名、头像、角色<br>教师信息：用户名、密码、姓名、性别、职称、所属专业、角色<br>学生信息：用户名、密码、姓名、性别、学号、总学分、所属学院、角色<br>学院信息：学院名称、学院介绍、最低学分<br>专业信息：专业名称、系名、所属学院<br>课程信息：课程名称、介绍、学分、所属学院、上课教师、开班人数、上课时段、上课地点、已选人数。如果某个课程被选过，那么该课程不允许被删除。<br>选课信息：课程名称、授课教师、选课学生。选课后可以取消选课，学生对应的学分也会跟着自动计算，课程已选人数也会自动计算。<br>系统公告：管理员维护，教师和学生查看<br>登录注册、修改密码、个人信息管理、退出登录  </p></blockquote><h2 id="2、系统角色"><a href="#2、系统角色" class="headerlink" title="2、系统角色"></a>2、系统角色</h2><blockquote><p>管理员：管理员可以看到以上所有模块，管理所有模块信息。<br>教师：教师可以看到学院信息、专业信息，但只能查看；可以查看自己的课程信息；可以查看自己课程的选课信息<br>学生：学生可以查看学院、专业信息；可以对课程进行选课，可以在选课信息模块对已选的课程进行取消。  </p></blockquote>]]></content>
     
