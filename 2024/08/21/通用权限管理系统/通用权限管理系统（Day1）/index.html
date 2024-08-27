@@ -19,15 +19,19 @@
   <meta name="author" content="许伟杰">
   <meta name="keywords" content="">
   
-    <meta name="description" content="目的学习前后端分离的项目搭建方法 系统技术栈 后端：Springboot3、MyBatis、SpringMVC前端：Vue3、Element-Plus数据库：MySQL 5.7 或者 MySQL 8前后端：分离编辑器：IDEA2024    系统功能描述1、功能模块 管理员信息：用户名、密码、姓名、头像、角色教师信息：用户名、密码、姓名、性别、职称、所属专业、角色学生信息：用户名、密码、姓名、性别">
+    <meta name="description" content="Day1 建立项目框架，数据库脚本的执行和运行  一、创建springboot工程项目 引入依赖 二、书写配置文件 修改配置文件后缀名为yml   三、创建基本的包结构">
 <meta property="og:type" content="article">
-<meta property="og:title" content="学生选课管理系统">
-<meta property="og:url" content="http://example.com/2024/08/21/%E5%AD%A6%E7%94%9F%E9%80%89%E8%AF%BE%E7%B3%BB%E7%BB%9F/%E5%AD%A6%E7%94%9F%E9%80%89%E8%AF%BE%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/index.html">
+<meta property="og:title" content="学生选课系统（Day1）">
+<meta property="og:url" content="http://example.com/2024/08/21/%E9%80%9A%E7%94%A8%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/%E9%80%9A%E7%94%A8%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%EF%BC%88Day1%EF%BC%89/index.html">
 <meta property="og:site_name" content="不正包退的个人博客">
-<meta property="og:description" content="目的学习前后端分离的项目搭建方法 系统技术栈 后端：Springboot3、MyBatis、SpringMVC前端：Vue3、Element-Plus数据库：MySQL 5.7 或者 MySQL 8前后端：分离编辑器：IDEA2024    系统功能描述1、功能模块 管理员信息：用户名、密码、姓名、头像、角色教师信息：用户名、密码、姓名、性别、职称、所属专业、角色学生信息：用户名、密码、姓名、性别">
+<meta property="og:description" content="Day1 建立项目框架，数据库脚本的执行和运行  一、创建springboot工程项目 引入依赖 二、书写配置文件 修改配置文件后缀名为yml   三、创建基本的包结构">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-08-21T01:31:32.000Z">
-<meta property="article:modified_time" content="2024-08-21T01:40:01.263Z">
+<meta property="og:image" content="http://example.com/source/img/xkxt/day1/Snipaste_2024-08-21_20-25-57.jpg">
+<meta property="og:image" content="http://example.com/source/img/xkxt/day1/Snipaste_2024-08-21_20-31-22.jpg">
+<meta property="og:image" content="http://example.com/source/img/xkxt/day1/Snipaste_2024-08-21_20-35-31.jpg">
+<meta property="og:image" content="http://example.com/source/img/xkxt/day1/Snipaste_2024-08-21_20-41-01.jpg">
+<meta property="article:published_time" content="2024-08-21T12:16:06.000Z">
+<meta property="article:modified_time" content="2024-08-21T13:14:33.156Z">
 <meta property="article:author" content="许伟杰">
 <meta property="article:tag" content="Springboot3">
 <meta property="article:tag" content="MyBatis">
@@ -35,10 +39,11 @@
 <meta property="article:tag" content="Vue3">
 <meta property="article:tag" content="Element-Plus">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/source/img/xkxt/day1/Snipaste_2024-08-21_20-25-57.jpg">
   
   
   
-  <title>学生选课管理系统 - 不正包退的个人博客</title>
+  <title>学生选课系统（Day1） - 不正包退的个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -204,7 +209,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="学生选课管理系统"></span>
+            <span id="subtitle" data-typed-text="学生选课系统（Day1）"></span>
           
         </div>
 
@@ -215,8 +220,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-08-21 09:31" pubdate>
-          2024年8月21日 上午
+        <time datetime="2024-08-21 20:16" pubdate>
+          2024年8月21日 晚上
         </time>
       </span>
     
@@ -227,7 +232,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          406 字
+          57 字
         
       </span>
     
@@ -238,7 +243,7 @@
         
         
         
-          4 分钟
+          1 分钟
         
       </span>
     
@@ -275,22 +280,20 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">学生选课管理系统</h1>
+            <h1 id="seo-header">学生选课系统（Day1）</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>学习前后端分离的项目搭建方法</p>
-<h1 id="系统技术栈"><a href="#系统技术栈" class="headerlink" title="系统技术栈"></a>系统技术栈</h1><blockquote>
-<p>后端：Springboot3、MyBatis、SpringMVC<br>前端：Vue3、Element-Plus<br>数据库：MySQL 5.7 或者 MySQL 8<br>前后端：分离<br>编辑器：IDEA2024  </p>
+                <h1 id="Day1"><a href="#Day1" class="headerlink" title="Day1"></a>Day1</h1><blockquote>
+<p>建立项目框架，数据库脚本的执行和运行</p>
 </blockquote>
-<h1 id="系统功能描述"><a href="#系统功能描述" class="headerlink" title="系统功能描述"></a>系统功能描述</h1><h2 id="1、功能模块"><a href="#1、功能模块" class="headerlink" title="1、功能模块"></a>1、功能模块</h2><blockquote>
-<p>管理员信息：用户名、密码、姓名、头像、角色<br>教师信息：用户名、密码、姓名、性别、职称、所属专业、角色<br>学生信息：用户名、密码、姓名、性别、学号、总学分、所属学院、角色<br>学院信息：学院名称、学院介绍、最低学分<br>专业信息：专业名称、系名、所属学院<br>课程信息：课程名称、介绍、学分、所属学院、上课教师、开班人数、上课时段、上课地点、已选人数。如果某个课程被选过，那么该课程不允许被删除。<br>选课信息：课程名称、授课教师、选课学生。选课后可以取消选课，学生对应的学分也会跟着自动计算，课程已选人数也会自动计算。<br>系统公告：管理员维护，教师和学生查看<br>登录注册、修改密码、个人信息管理、退出登录  </p>
+<h2 id="一、创建springboot工程项目-引入依赖"><a href="#一、创建springboot工程项目-引入依赖" class="headerlink" title="一、创建springboot工程项目 引入依赖"></a>一、创建springboot工程项目 引入依赖</h2><p><img src="/source/img/xkxt/day1/Snipaste_2024-08-21_20-25-57.jpg" srcset="/img/loading.gif" lazyload alt="图1"><br><img src="/source/img/xkxt/day1/Snipaste_2024-08-21_20-31-22.jpg" srcset="/img/loading.gif" lazyload alt="图2"><br><img src="/source/img/xkxt/day1/Snipaste_2024-08-21_20-35-31.jpg" srcset="/img/loading.gif" lazyload alt="图3"></p>
+<h2 id="二、书写配置文件"><a href="#二、书写配置文件" class="headerlink" title="二、书写配置文件"></a>二、书写配置文件</h2><blockquote>
+<p>修改配置文件后缀名为yml</p>
 </blockquote>
-<h2 id="2、系统角色"><a href="#2、系统角色" class="headerlink" title="2、系统角色"></a>2、系统角色</h2><blockquote>
-<p>管理员：管理员可以看到以上所有模块，管理所有模块信息。<br>教师：教师可以看到学院信息、专业信息，但只能查看；可以查看自己的课程信息；可以查看自己课程的选课信息<br>学生：学生可以查看学院、专业信息；可以对课程进行选课，可以在选课信息模块对已选的课程进行取消。  </p>
-</blockquote>
-
+<p><img src="/source/img/xkxt/day1/Snipaste_2024-08-21_20-41-01.jpg" srcset="/img/loading.gif" lazyload alt="图4"></p>
+<h2 id="三、创建基本的包结构"><a href="#三、创建基本的包结构" class="headerlink" title="三、创建基本的包结构"></a>三、创建基本的包结构</h2>
                 
               </div>
             
@@ -343,8 +346,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>学生选课管理系统</div>
-      <div>http://example.com/2024/08/21/学生选课系统/学生选课管理系统/</div>
+      <div>学生选课系统（Day1）</div>
+      <div>http://example.com/2024/08/21/通用权限管理系统/通用权限管理系统（Day1）/</div>
     </div>
     <div class="license-meta">
       
@@ -388,12 +391,18 @@
                   <article class="post-prev col-6">
                     
                     
+                      <a href="/2024/08/27/%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%AE%AD/%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%AE%AD/" title="工程实训(day1)">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">工程实训(day1)</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/08/17/markdown%E6%95%99%E7%A8%8B/" title="markdown教程">
-                        <span class="hidden-mobile">markdown教程</span>
+                      <a href="/2024/08/21/%E9%80%9A%E7%94%A8%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/%E9%80%9A%E7%94%A8%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/" title="通用权限管理系统">
+                        <span class="hidden-mobile">通用权限管理系统</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

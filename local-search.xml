@@ -4,16 +4,76 @@
   
   
   <entry>
-    <title>学生选课管理系统</title>
-    <link href="/2024/08/21/%E5%AD%A6%E7%94%9F%E9%80%89%E8%AF%BE%E7%B3%BB%E7%BB%9F/%E5%AD%A6%E7%94%9F%E9%80%89%E8%AF%BE%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
-    <url>/2024/08/21/%E5%AD%A6%E7%94%9F%E9%80%89%E8%AF%BE%E7%B3%BB%E7%BB%9F/%E5%AD%A6%E7%94%9F%E9%80%89%E8%AF%BE%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/</url>
+    <title>工程实训(day1)</title>
+    <link href="/2024/08/27/%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%AE%AD/%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%AE%AD/"/>
+    <url>/2024/08/27/%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%AE%AD/%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%AE%AD/</url>
     
-    <content type="html"><![CDATA[<h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>学习前后端分离的项目搭建方法</p><h1 id="系统技术栈"><a href="#系统技术栈" class="headerlink" title="系统技术栈"></a>系统技术栈</h1><blockquote><p>后端：Springboot3、MyBatis、SpringMVC<br>前端：Vue3、Element-Plus<br>数据库：MySQL 5.7 或者 MySQL 8<br>前后端：分离<br>编辑器：IDEA2024  </p></blockquote><h1 id="系统功能描述"><a href="#系统功能描述" class="headerlink" title="系统功能描述"></a>系统功能描述</h1><h2 id="1、功能模块"><a href="#1、功能模块" class="headerlink" title="1、功能模块"></a>1、功能模块</h2><blockquote><p>管理员信息：用户名、密码、姓名、头像、角色<br>教师信息：用户名、密码、姓名、性别、职称、所属专业、角色<br>学生信息：用户名、密码、姓名、性别、学号、总学分、所属学院、角色<br>学院信息：学院名称、学院介绍、最低学分<br>专业信息：专业名称、系名、所属学院<br>课程信息：课程名称、介绍、学分、所属学院、上课教师、开班人数、上课时段、上课地点、已选人数。如果某个课程被选过，那么该课程不允许被删除。<br>选课信息：课程名称、授课教师、选课学生。选课后可以取消选课，学生对应的学分也会跟着自动计算，课程已选人数也会自动计算。<br>系统公告：管理员维护，教师和学生查看<br>登录注册、修改密码、个人信息管理、退出登录  </p></blockquote><h2 id="2、系统角色"><a href="#2、系统角色" class="headerlink" title="2、系统角色"></a>2、系统角色</h2><blockquote><p>管理员：管理员可以看到以上所有模块，管理所有模块信息。<br>教师：教师可以看到学院信息、专业信息，但只能查看；可以查看自己的课程信息；可以查看自己课程的选课信息<br>学生：学生可以查看学院、专业信息；可以对课程进行选课，可以在选课信息模块对已选的课程进行取消。  </p></blockquote>]]></content>
+    <content type="html"><![CDATA[<h1 id="XH介绍"><a href="#XH介绍" class="headerlink" title="XH介绍"></a>XH介绍</h1><p> <code>HBuilderX</code>，H是HTML的首字母，Builder是构造者，X是HBuilder的下一代版本。我们也简称<code>HX</code>。<br><code>HX</code>是<strong>轻如编辑器、强如IDE</strong>的合体版本。uni-app</p><h1 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h1><p><img src="/../../img/shixun/Snipaste_2024-08-27_09-08-11.jpg" alt="图1"></p><h3 id="修改全局样式"><a href="#修改全局样式" class="headerlink" title="修改全局样式"></a>修改全局样式</h3><p>新建common目录和common-style.scss文件<br><img src="/../../img/shixun/Snipaste_2024-08-27_09-53-59.jpg" alt="图2"></p><h3 id="在common-style-scss键入"><a href="#在common-style-scss键入" class="headerlink" title="在common-style.scss键入"></a>在common-style.scss键入</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">view&#123;<br>box-sizing: border-box;<br>&#125;<br></code></pre></td></tr></table></figure><h1 id="修改标题"><a href="#修改标题" class="headerlink" title="修改标题"></a>修改标题</h1><p><img src="/../../img/shixun/Snipaste_2024-08-27_08-58-03.jpg" alt="图3"></p><h1 id="使用微信小程序运行"><a href="#使用微信小程序运行" class="headerlink" title="使用微信小程序运行"></a>使用微信小程序运行</h1><h1 id="轮播图"><a href="#轮播图" class="headerlink" title="轮播图"></a>轮播图</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash">&lt;view class=<span class="hljs-string">&quot;banner&quot;</span>&gt;<br>&lt;swiper autoplay circular indicator-dots&gt;<br>&lt;swiper-item v-for=<span class="hljs-string">&quot;item in 3&quot;</span>&gt;<br>&lt;image src=<span class="hljs-string">&quot;../../common/img/Snipaste_2024-08-16_21-24-04.jpg&quot;</span>&gt;&lt;/image&gt;<br>&lt;/swiper-item&gt;<br>&lt;/swiper&gt;<br>&lt;/view&gt;<br></code></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs bash">.body &#123;<br>width: 100vw;<br>padding: 0 30rpx;<br>.banner &#123;<br>width: 100%;<br>padding: 30rpx 0;<br>swiper&#123;<br>width: 100%;<br>height: 340rpx;<br>image&#123;<br>width: 100%;<br>height: 100%;<br>border-radius: 10rpx;<br>&#125;<br>&#125;<br>&#125;<br>&#125;<br></code></pre></td></tr></table></figure><h1 id="图标"><a href="#图标" class="headerlink" title="图标"></a>图标</h1><p>1、安装组件<br>⭐<a href="https://uniapp.dcloud.net.cn/">uni-app官网</a><br><img src="/../../img/shixun/Snipaste_2024-08-27_09-45-23.jpg" alt="图4"><br><img src="/../../img/shixun/Snipaste_2024-08-27_09-45-43.jpg" alt="图5"><br><img src="/../../img/shixun/Snipaste_2024-08-27_09-55-28.jpg" alt="图6"></p><h1 id="通知条"><a href="#通知条" class="headerlink" title="通知条"></a>通知条</h1><h3 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h3><p><img src="/../../img/shixun/Snipaste_2024-08-27_12-58-53.jpg" alt="图7"></p><h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs bash">&lt;view class=<span class="hljs-string">&quot;notice&quot;</span>&gt;<br>&lt;view class=<span class="hljs-string">&quot;left&quot;</span>&gt;<br>&lt;uni-icons <span class="hljs-built_in">type</span>=<span class="hljs-string">&quot;sound-filled&quot;</span> color=<span class="hljs-string">&quot;#32CD32&quot;</span> size=<span class="hljs-string">&quot;20&quot;</span>&gt;&lt;/uni-icons&gt;<br>&lt;text&gt;公告&lt;/text&gt;<br>&lt;/view&gt;<br>&lt;view class=<span class="hljs-string">&quot;center&quot;</span>&gt;<br>&lt;swiper autoplay circular interval=<span class="hljs-string">&quot;2000&quot;</span> vertical&gt;<br>&lt;swiper-item v-for=<span class="hljs-string">&quot;item in 3&quot;</span>&gt;<br>&lt;text&gt;公告1&lt;/text&gt;<br>&lt;/swiper-item&gt;<br>&lt;/swiper&gt;<br>&lt;/view&gt;<br>&lt;view class=<span class="hljs-string">&quot;right&quot;</span>&gt;<br>&lt;uni-icons <span class="hljs-built_in">type</span>=<span class="hljs-string">&quot;forward&quot;</span> color=<span class="hljs-string">&quot;#32CD32&quot;</span> size=<span class="hljs-string">&quot;20&quot;</span>&gt;&lt;/uni-icons&gt;<br>&lt;/view&gt;<br>&lt;/view&gt;<br></code></pre></td></tr></table></figure><h1 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h1><p>新建components目录和common-title组件<br><img src="/../../img/shixun/Snipaste_2024-08-27_13-01-49.jpg" alt="图8"></p><h1 id="每日推荐"><a href="#每日推荐" class="headerlink" title="每日推荐"></a>每日推荐</h1>]]></content>
+    
+    
+    <categories>
+      
+      <category>工程实训</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>HX</tag>
+      
+      <tag>https://colordrop.io/</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>学生选课系统（Day1）</title>
+    <link href="/2024/08/21/%E9%80%9A%E7%94%A8%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/%E9%80%9A%E7%94%A8%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%EF%BC%88Day1%EF%BC%89/"/>
+    <url>/2024/08/21/%E9%80%9A%E7%94%A8%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/%E9%80%9A%E7%94%A8%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%EF%BC%88Day1%EF%BC%89/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Day1"><a href="#Day1" class="headerlink" title="Day1"></a>Day1</h1><blockquote><p>建立项目框架，数据库脚本的执行和运行</p></blockquote><h2 id="一、创建springboot工程项目-引入依赖"><a href="#一、创建springboot工程项目-引入依赖" class="headerlink" title="一、创建springboot工程项目 引入依赖"></a>一、创建springboot工程项目 引入依赖</h2><p><img src="/source/img/xkxt/day1/Snipaste_2024-08-21_20-25-57.jpg" alt="图1"><br><img src="/source/img/xkxt/day1/Snipaste_2024-08-21_20-31-22.jpg" alt="图2"><br><img src="/source/img/xkxt/day1/Snipaste_2024-08-21_20-35-31.jpg" alt="图3"></p><h2 id="二、书写配置文件"><a href="#二、书写配置文件" class="headerlink" title="二、书写配置文件"></a>二、书写配置文件</h2><blockquote><p>修改配置文件后缀名为yml</p></blockquote><p><img src="/source/img/xkxt/day1/Snipaste_2024-08-21_20-41-01.jpg" alt="图4"></p><h2 id="三、创建基本的包结构"><a href="#三、创建基本的包结构" class="headerlink" title="三、创建基本的包结构"></a>三、创建基本的包结构</h2>]]></content>
     
     
     <categories>
       
       <category>学生选课管理系统</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Springboot3</tag>
+      
+      <tag>MyBatis</tag>
+      
+      <tag>SpringMVC</tag>
+      
+      <tag>Vue3</tag>
+      
+      <tag>Element-Plus</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>通用权限管理系统</title>
+    <link href="/2024/08/21/%E9%80%9A%E7%94%A8%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/%E9%80%9A%E7%94%A8%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
+    <url>/2024/08/21/%E9%80%9A%E7%94%A8%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/%E9%80%9A%E7%94%A8%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/</url>
+    
+    <content type="html"><![CDATA[<h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>学习前后端分离的项目搭建方法</p><h1 id="系统技术栈"><a href="#系统技术栈" class="headerlink" title="系统技术栈"></a>系统技术栈</h1><blockquote><p>后端：Spring Boot、MyBatis Plus、Spring Security、jwt、Redis<br>前端：HTML5、CSS3、JS、Vue3、Element-Plus<br>数据库：MySQL 5.7 或者 MySQL 8、9<br>前后端：分离<br>编辑器：IDEA2024、vs code<br>其他：git </p></blockquote><h1 id="环境要求"><a href="#环境要求" class="headerlink" title="环境要求"></a>环境要求</h1><h2 id="后端环境要求"><a href="#后端环境要求" class="headerlink" title="后端环境要求"></a>后端环境要求</h2><blockquote><p>jdk8+<br>maven 3.6+<br>Spring Boot2+  </p></blockquote><h2 id="前端环境要求"><a href="#前端环境要求" class="headerlink" title="前端环境要求"></a>前端环境要求</h2><blockquote><p>node.js<br>python 3+</p></blockquote><h1 id="系统功能描述"><a href="#系统功能描述" class="headerlink" title="系统功能描述"></a>系统功能描述</h1><h2 id="1、功能模块"><a href="#1、功能模块" class="headerlink" title="1、功能模块"></a>1、功能模块</h2>]]></content>
+    
+    
+    <categories>
+      
+      <category>通用权限管理系统</category>
       
     </categories>
     
