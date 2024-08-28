@@ -47,7 +47,7 @@
 <meta property="og:image" content="http://example.com/img/shixun/Snipaste_2024-08-27_20-24-27.jpg">
 <meta property="og:image" content="http://example.com/img/shixun/Snipaste_2024-08-27_20-18-53.jpg">
 <meta property="article:published_time" content="2024-08-26T23:44:07.000Z">
-<meta property="article:modified_time" content="2024-08-27T12:53:35.833Z">
+<meta property="article:modified_time" content="2024-08-28T09:40:10.166Z">
 <meta property="article:author" content="许伟杰">
 <meta property="article:tag" content="HX">
 <meta property="article:tag" content="uni-app">
@@ -55,6 +55,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://example.com/img/shixun/Snipaste_2024-08-27_20-31-39%20(1).png">
   
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
   
   
   <title>工程实训(day1) - 不正包退的个人博客</title>
@@ -264,6 +266,15 @@
 
     
     
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+
+      
+    
   </div>
 
 
@@ -348,11 +359,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><code class="hljs bash">&lt;template&gt;<br>	&lt;view class=<span class="hljs-string">&quot;userLayout pageBg&quot;</span>&gt;<br>		&lt;view class=<span class="hljs-string">&quot;userInfo&quot;</span>&gt;<br>			&lt;view class=<span class="hljs-string">&quot;avatar&quot;</span>&gt;<br>				&lt;image src=<span class="hljs-string">&quot;../../static/logo.png&quot;</span>&gt;&lt;/image&gt;<br>			&lt;/view&gt;<br>			&lt;view class=<span class="hljs-string">&quot;ip&quot;</span>&gt;12093702173&lt;/view&gt;<br>			&lt;view class=<span class="hljs-string">&quot;address&quot;</span>&gt;来自：哈尔滨&lt;/view&gt;<br>		&lt;/view&gt;<br><br>		&lt;view class=<span class="hljs-string">&quot;section&quot;</span>&gt;&lt;/view&gt;<br>		&lt;view class=<span class="hljs-string">&quot;section&quot;</span>&gt;&lt;/view&gt;<br>	&lt;/view&gt;<br>&lt;/template&gt;<br><br>&lt;script setup&gt;<br><br>&lt;/script&gt;<br><br>&lt;style lang=<span class="hljs-string">&quot;scss&quot;</span> scoped&gt;<br>	.userLayout &#123;<br>		.userInfo &#123;<br>			display: flex;<br>			flex-direction: column;<br>			align-items: center;<br>			justify-content: center;<br>			padding: 50rpx 0;<br>			.avatar&#123;<br>				width: 160rpx;<br>				height: 160rpx;<br>				border-radius: 50%;<br>				overflow: hidden;<br>				image&#123;<br>					width: 100%;<br>					height: 100%;<br>				&#125;<br>			&#125;<br>			.ip&#123;<br>				font-size: 44rpx;<br>				color: <span class="hljs-comment">#333;</span><br>				padding: 20rpx 0 5rpx;<br>			&#125;<br>			.address&#123;<br>				font-size: 28rpx;<br>				color: <span class="hljs-comment">#333;</span><br>			&#125;<br>		&#125;<br>	&#125;<br>&lt;/style&gt;<br></code></pre></td></tr></table></figure>
 <h1 id="全局页面背景色"><a href="#全局页面背景色" class="headerlink" title="全局页面背景色"></a>全局页面背景色</h1><p>在common-style.scss文件中添加代码(使用linear-gradient设置渐变色背景，详情⭐<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/gradient/linear-gradient">linear-gradient</a>)</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">.pageBg&#123;<br>	min-height: 90vm;<br>	background: linear-gradient(to bottom, rgba(162,215,41,0.6), <span class="hljs-comment">#fff 400rpx), linear-gradient(to right, #FF7D40 20%, #fff);</span><br>&#125;<br></code></pre></td></tr></table></figure>
-
-
-
-
-
+<h1 id="day1完"><a href="#day1完" class="headerlink" title="day1完"></a>day1完</h1>
                 
               </div>
             
@@ -446,12 +453,18 @@
                   <article class="post-prev col-6">
                     
                     
+                      <a href="/2024/08/28/%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%AE%AD/%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%AE%AD1/" title="工程实训(day2)">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">工程实训(day2)</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/08/21/%E9%80%9A%E7%94%A8%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/%E9%80%9A%E7%94%A8%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%EF%BC%88Day1%EF%BC%89/" title="学生选课系统（Day1）">
-                        <span class="hidden-mobile">学生选课系统（Day1）</span>
+                      <a href="/2024/08/21/%E9%80%9A%E7%94%A8%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/%E9%80%9A%E7%94%A8%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%EF%BC%88Day1%EF%BC%89/" title="通用权限管理系统（Day1）">
+                        <span class="hidden-mobile">通用权限管理系统（Day1）</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -733,6 +746,8 @@
   <script>Fluid.plugins.imageCaption();</script>
 
   <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 
