@@ -19,28 +19,25 @@
   <meta name="author" content="许伟杰">
   <meta name="keywords" content="">
   
-    <meta name="description" content="目的学习前后端分离的项目搭建方法 系统技术栈 后端：Spring Boot、MyBatis Plus、Spring Security、jwt、Redis前端：HTML5、CSS3、JS、Vue3、Element-Plus数据库：MySQL 5.7 或者 MySQL 8、9前后端：分离编辑器：IDEA2024、vs code其他：git   环境要求后端环境要求 jdk8+maven 3.6+Spr">
+    <meta name="description" content="问题给定一个对象数组，找到id为1的所有元素，返回一个新的数组，你有几种方法？   方法一：使用 Array.prototype.filterfilter 方法会遍历数组中的每一个元素，并返回一个新数组，该数组包含所有符合条件的元素。 12345678910const array &#x3D; [  &#123; id: 1, name: &#x27;Alice&#x27; &#125;,  &#123;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="通用权限管理系统">
-<meta property="og:url" content="http://example.com/2024/08/21/%E9%80%9A%E7%94%A8%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/%E9%80%9A%E7%94%A8%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/index.html">
+<meta property="og:title" content="寻找数组ID">
+<meta property="og:url" content="http://example.com/2024/08/28/%E5%AF%BB%E6%89%BE%E6%95%B0%E7%BB%84ID/index.html">
 <meta property="og:site_name" content="不正包退的个人博客">
-<meta property="og:description" content="目的学习前后端分离的项目搭建方法 系统技术栈 后端：Spring Boot、MyBatis Plus、Spring Security、jwt、Redis前端：HTML5、CSS3、JS、Vue3、Element-Plus数据库：MySQL 5.7 或者 MySQL 8、9前后端：分离编辑器：IDEA2024、vs code其他：git   环境要求后端环境要求 jdk8+maven 3.6+Spr">
+<meta property="og:description" content="问题给定一个对象数组，找到id为1的所有元素，返回一个新的数组，你有几种方法？   方法一：使用 Array.prototype.filterfilter 方法会遍历数组中的每一个元素，并返回一个新数组，该数组包含所有符合条件的元素。 12345678910const array &#x3D; [  &#123; id: 1, name: &#x27;Alice&#x27; &#125;,  &#123;">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-08-21T01:31:32.000Z">
-<meta property="article:modified_time" content="2024-08-28T14:17:46.970Z">
+<meta property="article:published_time" content="2024-08-28T14:05:04.000Z">
+<meta property="article:modified_time" content="2024-08-28T14:14:39.777Z">
 <meta property="article:author" content="许伟杰">
-<meta property="article:tag" content="Springboot3">
-<meta property="article:tag" content="MyBatis">
-<meta property="article:tag" content="SpringMVC">
-<meta property="article:tag" content="Vue3">
-<meta property="article:tag" content="Element Plus">
+<meta property="article:tag" content="HTML">
+<meta property="article:tag" content="JS">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>通用权限管理系统 - 不正包退的个人博客</title>
+  <title>寻找数组ID - 不正包退的个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -206,7 +203,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="通用权限管理系统"></span>
+            <span id="subtitle" data-typed-text="寻找数组ID"></span>
           
         </div>
 
@@ -217,8 +214,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-08-21 09:31" pubdate>
-          2024年8月21日 上午
+        <time datetime="2024-08-28 22:05" pubdate>
+          2024年8月28日 晚上
         </time>
       </span>
     
@@ -229,7 +226,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          78 字
+          520 字
         
       </span>
     
@@ -240,7 +237,7 @@
         
         
         
-          1 分钟
+          5 分钟
         
       </span>
     
@@ -286,22 +283,22 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">通用权限管理系统</h1>
+            <h1 id="seo-header">寻找数组ID</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>学习前后端分离的项目搭建方法</p>
-<h1 id="系统技术栈"><a href="#系统技术栈" class="headerlink" title="系统技术栈"></a>系统技术栈</h1><blockquote>
-<p>后端：Spring Boot、MyBatis Plus、Spring Security、jwt、Redis<br>前端：HTML5、CSS3、JS、Vue3、Element-Plus<br>数据库：MySQL 5.7 或者 MySQL 8、9<br>前后端：分离<br>编辑器：IDEA2024、vs code<br>其他：git </p>
-</blockquote>
-<h1 id="环境要求"><a href="#环境要求" class="headerlink" title="环境要求"></a>环境要求</h1><h2 id="后端环境要求"><a href="#后端环境要求" class="headerlink" title="后端环境要求"></a>后端环境要求</h2><blockquote>
-<p>jdk8+<br>maven 3.6+<br>Spring Boot2+  </p>
-</blockquote>
-<h2 id="前端环境要求"><a href="#前端环境要求" class="headerlink" title="前端环境要求"></a>前端环境要求</h2><blockquote>
-<p>node.js<br>python 3+</p>
-</blockquote>
-
+                <h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p><strong>给定一个对象数组，找到id为1的所有元素，返回一个新的数组，你有几种方法？</strong>  </p>
+<h4 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a>方法一：</h4><p>使用 Array.prototype.filter<br>filter 方法会遍历数组中的每一个元素，并返回一个新数组，该数组包含所有符合条件的元素。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs bash">const array = [<br>  &#123; <span class="hljs-built_in">id</span>: 1, name: <span class="hljs-string">&#x27;Alice&#x27;</span> &#125;,<br>  &#123; <span class="hljs-built_in">id</span>: 2, name: <span class="hljs-string">&#x27;Bob&#x27;</span> &#125;,<br>  &#123; <span class="hljs-built_in">id</span>: 1, name: <span class="hljs-string">&#x27;Charlie&#x27;</span> &#125;<br>];<br><br>const result = array.filter(item =&gt; item.id === 1);<br>console.log(result);<br>// Output: [ &#123; <span class="hljs-built_in">id</span>: 1, name: <span class="hljs-string">&#x27;Alice&#x27;</span> &#125;, &#123; <span class="hljs-built_in">id</span>: 1, name: <span class="hljs-string">&#x27;Charlie&#x27;</span> &#125; ]<br><br></code></pre></td></tr></table></figure>
+<h4 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h4><p>使用 Array.prototype.reduce<br>reduce 方法通过迭代数组并累积结果来生成最终输出。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs bash">const array = [<br>  &#123; <span class="hljs-built_in">id</span>: 1, name: <span class="hljs-string">&#x27;Alice&#x27;</span> &#125;,<br>  &#123; <span class="hljs-built_in">id</span>: 2, name: <span class="hljs-string">&#x27;Bob&#x27;</span> &#125;,<br>  &#123; <span class="hljs-built_in">id</span>: 1, name: <span class="hljs-string">&#x27;Charlie&#x27;</span> &#125;<br>];<br><br>const result = array.reduce((acc, item) =&gt; &#123;<br>  if (item.id === <span class="hljs-number">1</span>) &#123;<br>    acc.push(item);<br>  &#125;<br>  return acc;<br>&#125;, []);<br>console.log(result);<br>// Output: [ &#123; id: <span class="hljs-number">1</span>, name: &#x27;Alice&#x27; &#125;, &#123; id: <span class="hljs-number">1</span>, name: &#x27;Charlie&#x27; &#125; ]<br></code></pre></td></tr></table></figure>
+<h4 id="方法三："><a href="#方法三：" class="headerlink" title="方法三："></a>方法三：</h4><p>使用 Array.prototype.forEach<br>forEach 方法可以用于遍历数组，并在遍历过程中构建新的数组。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs bash">const array = [<br>  &#123; <span class="hljs-built_in">id</span>: 1, name: <span class="hljs-string">&#x27;Alice&#x27;</span> &#125;,<br>  &#123; <span class="hljs-built_in">id</span>: 2, name: <span class="hljs-string">&#x27;Bob&#x27;</span> &#125;,<br>  &#123; <span class="hljs-built_in">id</span>: 1, name: <span class="hljs-string">&#x27;Charlie&#x27;</span> &#125;<br>];<br><br>const result = [];<br>array.forEach(item =&gt; &#123;<br>  <span class="hljs-keyword">if</span> (item.id === 1) &#123;<br>    result.push(item);<br>  &#125;<br>&#125;);<br>console.log(result);<br>// Output: [ &#123; <span class="hljs-built_in">id</span>: 1, name: <span class="hljs-string">&#x27;Alice&#x27;</span> &#125;, &#123; <span class="hljs-built_in">id</span>: 1, name: <span class="hljs-string">&#x27;Charlie&#x27;</span> &#125; ]<br></code></pre></td></tr></table></figure>
+<h4 id="方法四："><a href="#方法四：" class="headerlink" title="方法四："></a>方法四：</h4><p>使用 for 循环<br>传统的 for 循环可以用来手动遍历数组并筛选出所需的元素。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs bash">const array = [<br>  &#123; <span class="hljs-built_in">id</span>: 1, name: <span class="hljs-string">&#x27;Alice&#x27;</span> &#125;,<br>  &#123; <span class="hljs-built_in">id</span>: 2, name: <span class="hljs-string">&#x27;Bob&#x27;</span> &#125;,<br>  &#123; <span class="hljs-built_in">id</span>: 1, name: <span class="hljs-string">&#x27;Charlie&#x27;</span> &#125;<br>];<br><br>const result = [];<br><span class="hljs-keyword">for</span> (<span class="hljs-built_in">let</span> i = 0; i &lt; array.length; i++) &#123;<br>  <span class="hljs-keyword">if</span> (array[i].<span class="hljs-built_in">id</span> === 1) &#123;<br>    result.push(array[i]);<br>  &#125;<br>&#125;<br>console.log(result);<br>// Output: [ &#123; <span class="hljs-built_in">id</span>: 1, name: <span class="hljs-string">&#x27;Alice&#x27;</span> &#125;, &#123; <span class="hljs-built_in">id</span>: 1, name: <span class="hljs-string">&#x27;Charlie&#x27;</span> &#125; ]<br></code></pre></td></tr></table></figure>
+<h4 id="方法五："><a href="#方法五：" class="headerlink" title="方法五："></a>方法五：</h4><p>使用 Array.prototype.find<br>find 方法会返回数组中第一个符合条件的元素，而不是所有符合条件的元素。不过，如果需要获取所有匹配的元素，find 方法不适合。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs bash">const array = [<br>  &#123; <span class="hljs-built_in">id</span>: 1, name: <span class="hljs-string">&#x27;Alice&#x27;</span> &#125;,<br>  &#123; <span class="hljs-built_in">id</span>: 2, name: <span class="hljs-string">&#x27;Bob&#x27;</span> &#125;,<br>  &#123; <span class="hljs-built_in">id</span>: 1, name: <span class="hljs-string">&#x27;Charlie&#x27;</span> &#125;<br>];<br><br>const firstMatch = array.find(item =&gt; item.id === 1);<br>console.log(firstMatch);<br>// Output: &#123; <span class="hljs-built_in">id</span>: 1, name: <span class="hljs-string">&#x27;Alice&#x27;</span> &#125;<br><br>// Note: `find` does not <span class="hljs-built_in">return</span> an array of all matches, just the first one.<br><br></code></pre></td></tr></table></figure>
                 
               </div>
             
@@ -319,7 +316,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E9%80%9A%E7%94%A8%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/" class="category-chain-item">通用权限管理系统</a>
+  <a href="/categories/%E6%9D%82%E8%AE%B0/" class="category-chain-item">杂记</a>
   
   
 
@@ -334,15 +331,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Springboot3/" class="print-no-link">#Springboot3</a>
+        <a href="/tags/HTML/" class="print-no-link">#HTML</a>
       
-        <a href="/tags/MyBatis/" class="print-no-link">#MyBatis</a>
-      
-        <a href="/tags/SpringMVC/" class="print-no-link">#SpringMVC</a>
-      
-        <a href="/tags/Vue3/" class="print-no-link">#Vue3</a>
-      
-        <a href="/tags/Element-Plus/" class="print-no-link">#Element Plus</a>
+        <a href="/tags/JS/" class="print-no-link">#JS</a>
       
     </div>
   
@@ -354,8 +345,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>通用权限管理系统</div>
-      <div>http://example.com/2024/08/21/通用权限管理系统/通用权限管理系统/</div>
+      <div>寻找数组ID</div>
+      <div>http://example.com/2024/08/28/寻找数组ID/</div>
     </div>
     <div class="license-meta">
       
@@ -367,7 +358,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年8月21日</div>
+          <div>2024年8月28日</div>
         </div>
       
       
@@ -399,9 +390,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/08/21/%E9%80%9A%E7%94%A8%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/%E9%80%9A%E7%94%A8%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%EF%BC%88Day1%EF%BC%89/" title="通用权限管理系统（Day1）">
+                      <a href="/2024/08/28/%E5%89%8D%E7%AB%AF%E4%B8%8D%E8%B0%83%E7%94%A8%E6%8E%A5%E5%8F%A3%E5%AE%9E%E7%8E%B0%E7%BF%BB%E9%A1%B5/" title="前端不调用接口实现翻页">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">通用权限管理系统（Day1）</span>
+                        <span class="hidden-mobile">前端不调用接口实现翻页</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -409,8 +400,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/08/17/markdown%E6%95%99%E7%A8%8B/" title="markdown教程">
-                        <span class="hidden-mobile">markdown教程</span>
+                      <a href="/2024/08/28/%E5%85%83%E7%B4%A0%E5%B1%85%E4%B8%AD/" title="元素居中">
+                        <span class="hidden-mobile">元素居中</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

@@ -19,19 +19,16 @@
   <meta name="author" content="许伟杰">
   <meta name="keywords" content="">
   
-    <meta name="description" content="目的学习前后端分离的项目搭建方法 系统技术栈 后端：Spring Boot、MyBatis Plus、Spring Security、jwt、Redis前端：HTML5、CSS3、JS、Vue3、Element-Plus数据库：MySQL 5.7 或者 MySQL 8、9前后端：分离编辑器：IDEA2024、vs code其他：git   环境要求后端环境要求 jdk8+maven 3.6+Spr">
+    <meta name="description" content="问题后端一次性给定全部数据，前端实现分页(vue3+elementplus)，翻页不调接口，描述实现逻辑。   实现方法 在 Vue 3 和 Element Plus 中实现前端分页逻辑，不需要每次翻页时调用接口，可以按照以下步骤进行：   接收数据: 从后端获取全部数据，并将其保存在 Vue 组件的 data 或 ref 中。   定义分页参数: 在组件中定义分页参数，例如当前页码 (curre">
 <meta property="og:type" content="article">
-<meta property="og:title" content="通用权限管理系统">
-<meta property="og:url" content="http://example.com/2024/08/21/%E9%80%9A%E7%94%A8%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/%E9%80%9A%E7%94%A8%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/index.html">
+<meta property="og:title" content="前端不调用接口实现翻页">
+<meta property="og:url" content="http://example.com/2024/08/28/%E5%89%8D%E7%AB%AF%E4%B8%8D%E8%B0%83%E7%94%A8%E6%8E%A5%E5%8F%A3%E5%AE%9E%E7%8E%B0%E7%BF%BB%E9%A1%B5/index.html">
 <meta property="og:site_name" content="不正包退的个人博客">
-<meta property="og:description" content="目的学习前后端分离的项目搭建方法 系统技术栈 后端：Spring Boot、MyBatis Plus、Spring Security、jwt、Redis前端：HTML5、CSS3、JS、Vue3、Element-Plus数据库：MySQL 5.7 或者 MySQL 8、9前后端：分离编辑器：IDEA2024、vs code其他：git   环境要求后端环境要求 jdk8+maven 3.6+Spr">
+<meta property="og:description" content="问题后端一次性给定全部数据，前端实现分页(vue3+elementplus)，翻页不调接口，描述实现逻辑。   实现方法 在 Vue 3 和 Element Plus 中实现前端分页逻辑，不需要每次翻页时调用接口，可以按照以下步骤进行：   接收数据: 从后端获取全部数据，并将其保存在 Vue 组件的 data 或 ref 中。   定义分页参数: 在组件中定义分页参数，例如当前页码 (curre">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-08-21T01:31:32.000Z">
-<meta property="article:modified_time" content="2024-08-28T14:17:46.970Z">
+<meta property="article:published_time" content="2024-08-28T14:06:04.000Z">
+<meta property="article:modified_time" content="2024-08-28T14:21:38.529Z">
 <meta property="article:author" content="许伟杰">
-<meta property="article:tag" content="Springboot3">
-<meta property="article:tag" content="MyBatis">
-<meta property="article:tag" content="SpringMVC">
 <meta property="article:tag" content="Vue3">
 <meta property="article:tag" content="Element Plus">
 <meta name="twitter:card" content="summary_large_image">
@@ -40,7 +37,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>通用权限管理系统 - 不正包退的个人博客</title>
+  <title>前端不调用接口实现翻页 - 不正包退的个人博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -206,7 +203,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="通用权限管理系统"></span>
+            <span id="subtitle" data-typed-text="前端不调用接口实现翻页"></span>
           
         </div>
 
@@ -217,8 +214,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-08-21 09:31" pubdate>
-          2024年8月21日 上午
+        <time datetime="2024-08-28 22:06" pubdate>
+          2024年8月28日 晚上
         </time>
       </span>
     
@@ -229,7 +226,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          78 字
+          601 字
         
       </span>
     
@@ -240,7 +237,7 @@
         
         
         
-          1 分钟
+          6 分钟
         
       </span>
     
@@ -286,20 +283,49 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">通用权限管理系统</h1>
+            <h1 id="seo-header">前端不调用接口实现翻页</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>学习前后端分离的项目搭建方法</p>
-<h1 id="系统技术栈"><a href="#系统技术栈" class="headerlink" title="系统技术栈"></a>系统技术栈</h1><blockquote>
-<p>后端：Spring Boot、MyBatis Plus、Spring Security、jwt、Redis<br>前端：HTML5、CSS3、JS、Vue3、Element-Plus<br>数据库：MySQL 5.7 或者 MySQL 8、9<br>前后端：分离<br>编辑器：IDEA2024、vs code<br>其他：git </p>
+                <h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p><strong>后端一次性给定全部数据，前端实现分页(vue3+elementplus)，翻页不调接口，描述实现逻辑。</strong>  </p>
+<h4 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h4><blockquote>
+<p>在 Vue 3 和 Element Plus 中实现前端分页逻辑，不需要每次翻页时调用接口，可以按照以下步骤进行：</p>
 </blockquote>
-<h1 id="环境要求"><a href="#环境要求" class="headerlink" title="环境要求"></a>环境要求</h1><h2 id="后端环境要求"><a href="#后端环境要求" class="headerlink" title="后端环境要求"></a>后端环境要求</h2><blockquote>
-<p>jdk8+<br>maven 3.6+<br>Spring Boot2+  </p>
+<blockquote>
+<p>接收数据: 从后端获取全部数据，并将其保存在 Vue 组件的 data 或 ref 中。</p>
 </blockquote>
-<h2 id="前端环境要求"><a href="#前端环境要求" class="headerlink" title="前端环境要求"></a>前端环境要求</h2><blockquote>
-<p>node.js<br>python 3+</p>
+<blockquote>
+<p>定义分页参数: 在组件中定义分页参数，例如当前页码 (currentPage)、每页显示的条数 (pageSize) 和总页数 (totalPages)。</p>
+</blockquote>
+<blockquote>
+<p>计算当前页数据: 使用分页参数计算出当前页的数据。可以使用 slice 方法从原始数据中提取当前页的数据。</p>
+</blockquote>
+<blockquote>
+<p>展示数据: 将计算出的当前页数据绑定到模板中，并展示。</p>
+</blockquote>
+<blockquote>
+<p>分页控件: 使用 Element Plus 的分页组件 (<el-pagination>) 控制页码和每页条数，并响应页码变化。</el-pagination></p>
+</blockquote>
+<p>下面是一个简单的实现示例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><code class="hljs bash">&lt;template&gt;<br>  &lt;div&gt;<br>    &lt;!-- 数据表格 --&gt;<br>    &lt;el-table :data=<span class="hljs-string">&quot;currentPageData&quot;</span> style=<span class="hljs-string">&quot;width: 100%&quot;</span>&gt;<br>      &lt;el-table-column prop=<span class="hljs-string">&quot;id&quot;</span> label=<span class="hljs-string">&quot;ID&quot;</span>&gt;&lt;/el-table-column&gt;<br>      &lt;el-table-column prop=<span class="hljs-string">&quot;name&quot;</span> label=<span class="hljs-string">&quot;Name&quot;</span>&gt;&lt;/el-table-column&gt;<br>      &lt;!-- Add more columns as needed --&gt;<br>    &lt;/el-table&gt;<br><br>    &lt;!-- 分页控件 --&gt;<br>    &lt;el-pagination<br>      @current-change=<span class="hljs-string">&quot;handlePageChange&quot;</span><br>      :page-size=<span class="hljs-string">&quot;pageSize&quot;</span><br>      :total=<span class="hljs-string">&quot;totalItems&quot;</span><br>      :current-page=<span class="hljs-string">&quot;currentPage&quot;</span><br>      layout=<span class="hljs-string">&quot;prev, pager, next, jumper&quot;</span><br>    /&gt;<br>  &lt;/div&gt;<br>&lt;/template&gt;<br><br>&lt;script setup&gt;<br>import &#123; ref, computed &#125; from <span class="hljs-string">&#x27;vue&#x27;</span>;<br><br>// 假设从后端获取的数据<br>const allData = ref([<br>  &#123; <span class="hljs-built_in">id</span>: 1, name: <span class="hljs-string">&#x27;Alice&#x27;</span> &#125;,<br>  &#123; <span class="hljs-built_in">id</span>: 2, name: <span class="hljs-string">&#x27;Bob&#x27;</span> &#125;,<br>  &#123; <span class="hljs-built_in">id</span>: 3, name: <span class="hljs-string">&#x27;Charlie&#x27;</span> &#125;,<br>  // Add more data here<br>]);<br><br>const pageSize = ref(10); // 每页显示的条数<br>const currentPage = ref(1); // 当前页码<br>const totalItems = computed(() =&gt; allData.value.length); // 总数据条数<br><br>// 计算当前页的数据<br>const currentPageData = computed(() =&gt; &#123;<br>  const start = (currentPage.value - <span class="hljs-number">1</span>) * pageSize.value;<br>  const end = start + pageSize.value;<br>  return allData.value.slice(start, end);<br>&#125;);<br><br>// 处理页码变化<br>const handlePageChange = (page) =&gt; &#123;<br>  currentPage.value = page;<br>&#125;;<br>&lt;/script&gt;<br><br>&lt;style scoped&gt;<br>/* Add any custom styles here */<br>&lt;/style&gt;<br></code></pre></td></tr></table></figure>
+<h4 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h4><blockquote>
+<p>数据接收: allData 用于保存从后端获取的全部数据。</p>
+</blockquote>
+<blockquote>
+<p>分页参数: pageSize 和 currentPage 控制每页显示的条数和当前页码。</p>
+</blockquote>
+<blockquote>
+<p>计算当前页数据: currentPageData 通过 slice 方法计算出当前页的数据。</p>
+</blockquote>
+<blockquote>
+<p>展示数据: 在 &lt;el-table&gt; 中使用 currentPageData 展示当前页的数据。</p>
+</blockquote>
+<blockquote>
+<p>分页控件: &lt;el-pagination&gt; 控制页码切换，handlePageChange 方法更新 currentPage。</p>
+</blockquote>
+<blockquote>
+<p>这样，前端实现了分页逻辑，不需要每次翻页时调用接口。</p>
 </blockquote>
 
                 
@@ -319,7 +345,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E9%80%9A%E7%94%A8%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/" class="category-chain-item">通用权限管理系统</a>
+  <a href="/categories/%E6%9D%82%E8%AE%B0/" class="category-chain-item">杂记</a>
   
   
 
@@ -333,12 +359,6 @@
   
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/Springboot3/" class="print-no-link">#Springboot3</a>
-      
-        <a href="/tags/MyBatis/" class="print-no-link">#MyBatis</a>
-      
-        <a href="/tags/SpringMVC/" class="print-no-link">#SpringMVC</a>
       
         <a href="/tags/Vue3/" class="print-no-link">#Vue3</a>
       
@@ -354,8 +374,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>通用权限管理系统</div>
-      <div>http://example.com/2024/08/21/通用权限管理系统/通用权限管理系统/</div>
+      <div>前端不调用接口实现翻页</div>
+      <div>http://example.com/2024/08/28/前端不调用接口实现翻页/</div>
     </div>
     <div class="license-meta">
       
@@ -367,7 +387,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年8月21日</div>
+          <div>2024年8月28日</div>
         </div>
       
       
@@ -399,18 +419,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/08/21/%E9%80%9A%E7%94%A8%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/%E9%80%9A%E7%94%A8%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%EF%BC%88Day1%EF%BC%89/" title="通用权限管理系统（Day1）">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">通用权限管理系统（Day1）</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/08/17/markdown%E6%95%99%E7%A8%8B/" title="markdown教程">
-                        <span class="hidden-mobile">markdown教程</span>
+                      <a href="/2024/08/28/%E5%AF%BB%E6%89%BE%E6%95%B0%E7%BB%84ID/" title="寻找数组ID">
+                        <span class="hidden-mobile">寻找数组ID</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
